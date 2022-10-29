@@ -1,0 +1,19 @@
+
+#Listado de extenciones a ignorar
+
+*.jpg
+*.png
+*.vga
+*.webp
+*.pdf
+*.psd
+*.ai
+*.tiff
+*.gif
+*.mp4
+*.mkw
+*.avi
+*.mov
+*.wmv
+*.mpg
+*.fla
