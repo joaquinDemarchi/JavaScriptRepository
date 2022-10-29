@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+
+    <title>CRUD</title>
+    <style>
+        body{
+            background-color: #f7f6f6;
+        }
+        table thead{
+            background-color:rgb(39, 86, 196);
+            color: white;
+        }
+
+    </style>
+</head>
+  <body>
+    <div class="container mt-4 shadow-lg p-3 mb-5 bg-body round">
+    <button id="btnCrear" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArticulo" >Crear</button>
+    <table id="tablaArticulos" class="table mt-2 table-bordered table-striped">
+        <thead>
+            <tr class="class:text-center">
+                <th>ID</th>
+                <th>DESCRIPCION</th>
+                <th>PRECIO</th>
+                <th>STOCK</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>    
+    </table>
+
+    
+    
+
+    <div id ="modalArticulo" class="modal fade"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="descripcio">New message</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="descripcion" class="col-form-label">Descripcion:</label>
+                        <input type="text" class="form-control" id="descripcion">
+                    </div>
+                    <div class="mb-3">
+                        <label for="precio" class="col-form-label">Precio:</label>
+                        <textarea class="form-control" id="precio"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stcock" class="col-form-label">Stock:</label>
+                        <textarea class="form-control" id="stcock"></textarea>
+                    </div>
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- JavaScript -->
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+        
+        <script src="/script.js"></script>
+
+  </body>
+</html>

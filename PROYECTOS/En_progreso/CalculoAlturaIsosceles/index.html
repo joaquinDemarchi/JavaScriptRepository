@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+
+        <h1>Triangulos isosceles</h1>
+        <p>Taller Practico JS | HTML</p>
+
+    </header>
+    
+    <div class="isosceles-container">
+            <h2>Calcula la altura de un triangulo isosceles</h2>
+
+            <form>
+
+                <label for="">
+                    Escribe cuanto mide la base del triangulo
+                </label>
+                <input type="number" id="inputTrianguloB">
+
+                <label for="">
+                    Escribe cuanto mide el lado izquierdo del triangulo
+                </label>
+                <input type="number" id="inputTriangulo1">
+
+                <label for="">
+                    Escribe cuanto mide el lado derecho del triangulo
+                </label>
+                <input type="number" id="inputTriangulo2">
+
+
+                <button type="button" onclick="verificarIsosceles()">
+                    Verificar si es un isosceles
+                </button>
+
+                <button type="button" onclick="calcularAltura()">
+                    Calcular el altura
+                </button>
+            </form>
+        </div>
+
+        <script src="./scripts.js"></script>
+</body>
+</html>

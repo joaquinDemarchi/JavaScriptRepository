@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruv JS/HTML integration</title>
+    <style>
+        .clase1{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="btnPrueba">Prueba</button>
+    <input type="text"value="50"></input>
+
+    <div class="clase1">Caja 1</div>
+    <div class="clase1">Caja 2</div>
+
+    <script>
+
+        let tag = document.getElementById('btnPrueba');
+        let input1 = document.getElementById('input1');
+
+        //console.log(input1.value);
+        //console.log(tag.innerHTML);
+
+        //getElementsByClassName()
+        let clase1 = document.getElementsByClassName('clase1');
+        //console.log('clase1[1]');
+
+        clase1[0].style.backgruondColor = 'blue'
+
+        //querySelector()
+        console.log(document.querySelector('input'))
+
+        //addEventListener()
+
+    </script>
+</body>
+</html>
