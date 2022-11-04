@@ -1,0 +1,77 @@
+  /*General*/
+  body{
+    font-family:'Courier New';
+}
+
+/*inputs */
+/*inputs general*/
+input{
+    margin-right: 15px;
+    padding: 0;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: red;
+    box-shadow: 2px 1.3px 2px 0.5px gray;
+    background-color: white;
+    color: red;
+    text-align:center;
+    text-justify: auto;
+    text-shadow:  1px 1px 2px brown;
+    font-weight: 1000;
+    font-size: large;
+}
+/*Ocultar los botones de inputs*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+input[type=number] { -moz-appearance:textfield; }
+
+/*Texto */
+/*Tipos de movimientos*/
+.tipoMov{
+    font-weight: bolder;
+    font-size: x-large;
+    margin-bottom: 6px;
+}
+/*Calidad de movimientos*/
+.calidadMov{
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 2px;
+}
+
+/*Botones*/
+/*Boton imprimir*/
+#imprimir{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    border-color: brown;
+    box-shadow: 2px 1.3px 2px 0.5px gray;
+    background-color: red;
+    color: white;
+    text-align:center;
+    text-justify: auto;
+    text-shadow:  2px 2px 4px grey;
+    font-weight: 1000;
+    font-size: large;
+}
+
+.botIncDis{
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: brown;
+    box-shadow: 2px 1.3px 2px 0.5px gray;
+    background-color: red;
+    color: white;
+    text-align:center;
+    text-justify: auto;
+    text-shadow:  2px 2px 4px grey;
+    font-weight: 1000;
+    font-size: large;
+}

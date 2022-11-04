@@ -4,163 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Monitor de estadisticas de partidos</title>
 
-    <title>MARTIN</title>
-
-    <style>
-        /*General*/
-        body{
-            font-family:'Courier New';
-        }
-
-        /*inputs */
-        /*inputs general*/
-        input{
-            margin-right: 15px;
-            padding: 0;
-            width: 60px;
-            height: 40px;
-            border-radius: 10px;
-            border-color: red;
-            box-shadow: 2px 1.3px 2px 0.5px gray;
-            background-color: white;
-            color: red;
-            text-align:center;
-            text-justify: auto;
-            text-shadow:  1px 1px 2px brown;
-            font-weight: 1000;
-            font-size: large;
-        }
-        /*Ocultar los botones de inputs*/
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-        }
-
-        input[type=number] { -moz-appearance:textfield; }
-
-        /*Texto */
-        /*Tipos de movimientos*/
-        .tipoMov{
-            font-weight: bolder;
-            font-size: x-large;
-            margin-bottom: 6px;
-        }
-        /*Calidad de movimientos*/
-        .calidadMov{
-            font-weight: bold;
-            font-size: medium;
-            margin-bottom: 2px;
-        }
-        
-        /*Botones*/
-        /*Boton imprimir*/
-        #imprimir{
-            width: 150px;
-            height: 50px;
-            border-radius: 10px;
-            border-color: brown;
-            box-shadow: 2px 1.3px 2px 0.5px gray;
-            background-color: red;
-            color: white;
-            text-align:center;
-            text-justify: auto;
-            text-shadow:  2px 2px 4px grey;
-            font-weight: 1000;
-            font-size: large;
-        }
-
-        .botIncDis{
-            width: 40px;
-            height: 30px;
-            border-radius: 10px;
-            border-color: brown;
-            box-shadow: 2px 1.3px 2px 0.5px gray;
-            background-color: red;
-            color: white;
-            text-align:center;
-            text-justify: auto;
-            text-shadow:  2px 2px 4px grey;
-            font-weight: 1000;
-            font-size: large;
-        }
-        
-    </style>
 </head>
 
 <body>
     <main>
-        <section>
-            <title> Martin</title>
-        </section>
-        <section class="remates">
-            <div>
-                <p class="tipoMov">REMATES</p>
-                <input type="number" id = 'rematesTotales' readonly>
-            </div>
-            
-            <div>
-                <p class="calidadMov">Remates buenos</p>
-                <input type="number" id="rematesBuenos" >
-                <button type="button" id="sumarRemBue" class="botIncDis">+</button>
-                <button type="button" id="restarRemBue" class="botIncDis">-</button>
-            </div>
-            <div>
-                <p class="calidadMov">Remates malos</p>
-                <input type="number" id="rematesMalos" >
-                <button type="button" id="sumarRemMal" class="botIncDis">+</button>
-                <button type="button" id="restarRemMal" class="botIncDis">-</button>
-            </div>
-        </section >
-        <br>
-        <section class="recepciones">
-            <div>
-                <p class="tipoMov">RECEPCIONES</p>
-                <input type="number" id = 'recepTotales' readonly>
-            </div>
-            <div>
-                <p class="calidadMov">Recepciones buenas</p>
-                <input type="number" id="recepcionesBuenas" >
-                <button type="button" id="sumarRecBue" class="botIncDis">+</button>
-                <button type="button" id="restarRecBue" class="botIncDis">-</button>
-            </div>
-            <div>
-                <p class="calidadMov">Recepciones malas</p>
-                <input type="number" id="recepcionesMalas" >
-                <button type="button" id="sumarRecMal" class="botIncDis">+</button>
-                <button type="button" id="restarRecMal" class="botIncDis">-</button>
-            </div>
-        </section>
-        <br>
-        <section class="saques">
-            <div>
-                <p class="tipoMov">SAQUES</p>
-                <input type="number" id = 'saquesTotales' readonly>
-            </div>
-            <div>
-                <p class="calidadMov">Saques buenos</p>
-                <input type="number" id="saquesBuenos" >
-                <button type="button" id="sumarSaqBue"  class="botIncDis">+</button>
-                <button type="button" id="restarSaqBue" class="botIncDis">-</button>
-            </div>
-            <div>
-                <p class="calidadMov">Saques malos</p>
-                <input type="number" id="saquesMalos" >
-                <button type="button" id="sumarSaqMal" class="botIncDis">+</button>
-                <button type="button" id="restarSaqMal" class="botIncDis">-</button>
-            </div>
+        <title> Martin</title>
+        <section class="panel">
+            <section class="remates">
+                <div>
+                    <p class="tipoMov">REMATES</p>
+                    <input type="number" id = 'rematesTotales' readonly>
+                </div>
+                
+                <div>
+                    <p class="calidadMov">Remates buenos</p>
+                    <input type="number" id="rematesBuenos" >
+                    <button type="button" id="sumarRemBue" class="botIncDis">+</button>
+                    <button type="button" id="restarRemBue" class="botIncDis">-</button>
+                </div>
+                <div>
+                    <p class="calidadMov">Remates regulares</p>
+                    <input type="number" id="rematesRegulares" >
+                    <button type="button" id="sumarRemReg" class="botIncDis">+</button>
+                    <button type="button" id="restarRemReg" class="botIncDis">-</button>
+                </div>
+                <div>
+                    <p class="calidadMov">Remates malos</p>
+                    <input type="number" id="rematesMalos" >
+                    <button type="button" id="sumarRemMal" class="botIncDis">+</button>
+                    <button type="button" id="restarRemMal" class="botIncDis">-</button>
+                </div>
+            </section >
+            <br>
+            <section class="recepciones">
+                <div>
+                    <p class="tipoMov">RECEPCIONES</p>
+                    <input type="number" id = 'recepTotales' readonly>
+                </div>
+                <div>
+                    <p class="calidadMov">Recepciones buenas</p>
+                    <input type="number" id="recepcionesBuenas" >
+                    <button type="button" id="sumarRecBue" class="botIncDis">+</button>
+                    <button type="button" id="restarRecBue" class="botIncDis">-</button>
+                </div>
+                <div>
+                    <p class="calidadMov">Recepciones regulares</p>
+                    <input type="number" id="recepcionesRegulares" >
+                    <button type="button" id="sumarRecReg" class="botIncDis">+</button>
+                    <button type="button" id="restarRecReg" class="botIncDis">-</button>
+                </div>
+                <div>
+                    <p class="calidadMov">Recepciones malas</p>
+                    <input type="number" id="recepcionesMalas" >
+                    <button type="button" id="sumarRecMal" class="botIncDis">+</button>
+                    <button type="button" id="restarRecMal" class="botIncDis">-</button>
+                </div>
+            </section>
+            <br>
+            <section class="saques">
+                <div>
+                    <p class="tipoMov">SAQUES</p>
+                    <input type="number" id = 'saquesTotales' readonly>
+                </div>
+                <div>
+                    <p class="calidadMov">Saques buenos</p>
+                    <input type="number" id="saquesBuenos" >
+                    <button type="button" id="sumarSaqBue"  class="botIncDis">+</button>
+                    <button type="button" id="restarSaqBue" class="botIncDis">-</button>
+                </div>
+                <div>
+                    <p class="calidadMov">Saques regulares</p>
+                    <input type="number" id="saquesRegulares" >
+                    <button type="button" id="sumarSaqReg"  class="botIncDis">+</button>
+                    <button type="button" id="restarSaqReg" class="botIncDis">-</button>
+                </div>
+                <div>
+                    <p class="calidadMov">Saques malos</p>
+                    <input type="number" id="saquesMalos" >
+                    <button type="button" id="sumarSaqMal" class="botIncDis">+</button>
+                    <button type="button" id="restarSaqMal" class="botIncDis">-</button>
+                </div>
+            </section>
             <br>
             <br>
             <div>
                 <p id="DatosCompletos"></p>
                 <br>
                 <button id="imprimir" > IMPRIMIR </button>
+            </div>        
+        <!-- </section>
+        <section class="resultados ">
+            <div class="ResultRemates">
+                <div id ='remTOT'></div>
+                <div id ='re'></div>
+                <div id ='remTOT'></div>
             </div>
-            <div>
-                <p id="rematesParrafo"></p>
+            <div class="ResultRecepciones">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-        </section>
+            <div class="ResultSaques">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section> -->
     </main>
 
     <!-- FUNCIONALIDADES DEL PROYECTO -->
