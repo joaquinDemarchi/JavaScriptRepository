@@ -3,6 +3,9 @@
     font-family:'Courier New';
 }
 
+.inactive{
+    display: none;
+}
 /*inputs */
 /*inputs general*/
 input{

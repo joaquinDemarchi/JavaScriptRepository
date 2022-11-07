@@ -383,9 +383,9 @@ function DisSaqMal(){
 
 
 //IMPRIMIR DATOS
-
+const resulta = document.querySelector('.resultados')
 var boton_IMPRIMIR = document.getElementById("imprimir");
-boton_IMPRIMIR.addEventListener("click", imp_DT);
+boton_IMPRIMIR.addEventListener("click", imp_def);
 
 //remates
 
@@ -447,32 +447,32 @@ let saq_b_val = saq_b.value;
 
 //FUNCION IMPRESORA INTEGRADOR (ACTULIZAR)
 
-function imp_DT(rem_m_val, rem_r_val, rem_b_val,rec_m_val, rec_r_val, rec_b_val, saq_m_val, saq_r_val, saq_b_val){
+// function imp_DT(rem_m_val, rem_r_val, rem_b_val,rec_m_val, rec_r_val, rec_b_val, saq_m_val, saq_r_val, saq_b_val){
 
-        let rematesBuenos = Number(rem_b.value);
-        let rematesRegulares =  Number(rem_r.value);
-        let rematesMalos =  Number(rem_m.value);
+//         let rematesBuenos = Number(rem_b.value);
+//         let rematesRegulares =  Number(rem_r.value);
+//         let rematesMalos =  Number(rem_m.value);
     
-        let tot_rem = rematesMalos + rematesBuenos + rematesRegulares; 
+//         let tot_rem = rematesMalos + rematesBuenos + rematesRegulares; 
 
-    let tot_rec = Number(rec_m.value) + Number(rec_b.value); 
+//     let tot_rec = Number(rec_m.value) + Number(rec_b.value); 
 
-        let recepcionesBuenas = Number(rec_b.value);
-        let recepcionesMalas = Number(rec_m.value);
+//         let recepcionesBuenas = Number(rec_b.value);
+//         let recepcionesMalas = Number(rec_m.value);
 
-    let tot_saq = Number(saq_m.value) + Number(saq_b.value); 
+//     let tot_saq = Number(saq_m.value) + Number(saq_b.value); 
 
-        let saquesBuenos = Number(saq_b.value);
-        let saquesMalos = Number(saq_m.value);
+//         let saquesBuenos = Number(saq_b.value);
+//         let saquesMalos = Number(saq_m.value);
 
-    const result = document.getElementById("DatosCompletos");
+//     const result = document.getElementById("DatosCompletos");
 
-    return result.innerText = "REMATES TOTALES: ======> | " + tot_rem + ' | ' + '\n' + '\b' + '\b' +"Remates buenos: ---- | " + rematesBuenos + ' | ' + '\n' + '\b' + '\b' +"Remates malos: ---- | " + rematesMalos + ' | ' + '\n' + '\n' +" RECEPCIONES TOTALES: ======> | " + tot_rec + ' | ' + '\n'  + '\b' + '\b' +"Recepciones buenas: ---- | " + recepcionesBuenas + ' | ' + '\n' + '\b' + '\b' +"Recepciones malas: ---- | " + recepcionesMalas + ' | ' + '\n' + '\n' + " SAQUES TOTALES: ======> | " + tot_saq + ' | ' + '\n'  + '\b' + '\b' +"Saques buenos: ---- | " + saquesBuenos + ' | ' + '\n' + '\b' + '\b' +"Saques malos: ---- | " + saquesMalos + ' | ' ;
-};
+//     return result.innerText = "REMATES TOTALES: ======> | " + tot_rem + ' | ' + '\n' + '\b' + '\b' +"Remates buenos: ---- | " + rematesBuenos + ' | ' + '\n' + '\b' + '\b' +"Remates malos: ---- | " + rematesMalos + ' | ' + '\n' + '\n' +" RECEPCIONES TOTALES: ======> | " + tot_rec + ' | ' + '\n'  + '\b' + '\b' +"Recepciones buenas: ---- | " + recepcionesBuenas + ' | ' + '\n' + '\b' + '\b' +"Recepciones malas: ---- | " + recepcionesMalas + ' | ' + '\n' + '\n' + " SAQUES TOTALES: ======> | " + tot_saq + ' | ' + '\n'  + '\b' + '\b' +"Saques buenos: ---- | " + saquesBuenos + ' | ' + '\n' + '\b' + '\b' +"Saques malos: ---- | " + saquesMalos + ' | ' ;
+// };
 
 
 
-//ALTERNATIVA A FUNCION INTEGRADORA
+//ALTERNATIVA 1  A FUNCION INTEGRADORA
 // function imp_DT(rem_m_val, rem_r_val, rem_b_val,rec_m_val, rec_r_val, rec_b_val, saq_m_val, saq_r_val, saq_b_val){
 //     //remates
 // let rematesBuenos = Number(rem_b.value);
@@ -492,3 +492,27 @@ function imp_DT(rem_m_val, rem_r_val, rem_b_val,rec_m_val, rec_r_val, rec_b_val,
 // let saquesBuenos = Number(saq_b.value);
 // let saquesRegulares = Number(saq_r.value);
 // let saquesMalos = Number(saq_m.value);
+
+//ALTERNATIVA 2  A FUNCION INTEGRADORA (FUNCIONA!!, COMPLETAR)
+
+function rem_tot(rem_m_val, rem_r_val, rem_b_val){
+    let rematesBuenos = Number(rem_b.value);
+    let rematesRegulares = Number(rem_r.value);
+    let rematesMalos =  Number(rem_m.value);
+
+    let tot_rem = rematesMalos + rematesBuenos + rematesRegulares; 
+
+    const result = document.getElementById("r-tot");
+
+    return result.innerText = "los remates totales son: " + tot_rem; 
+}; 
+
+
+
+
+function imp_def(){
+
+    resulta.classList.toggle('inactive');
+
+    rem_tot()
+}; 
