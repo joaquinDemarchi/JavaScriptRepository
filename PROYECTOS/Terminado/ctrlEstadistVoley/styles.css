@@ -8,7 +8,7 @@
 }
 /*inputs */
 /*inputs general*/
-input{
+input, select{
     margin-right: 15px;
     padding: 0;
     width: 60px;
@@ -30,12 +30,15 @@ input[type=number]::-webkit-outer-spin-button {
 -webkit-appearance: none;
 margin: 0;
 }
-
 input[type=number] { -moz-appearance:textfield; }
 
+/* input de datos peliminares */
 .datosPrelim input{
     width: 160px;
-    height: 40px;
+    height: 35px;
+    border-radius: 20px;
+    border-width: 5px;
+    font-weight: 600;
 }
 
 /*Texto */
@@ -83,3 +86,19 @@ input[type=number] { -moz-appearance:textfield; }
     font-weight: 1000;
     font-size: large;
 }
+
+/* select */
+
+.selector{
+    width: 170px;
+    height: 43px;
+    border-radius: 20px;
+    font-weight: 600;
+    border-width: 5px;
+}
+
+.value{
+    font-weight: 800;
+}
+
+/* resultados */
