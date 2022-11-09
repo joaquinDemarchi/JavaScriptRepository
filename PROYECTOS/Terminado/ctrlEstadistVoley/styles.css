@@ -45,14 +45,14 @@ input[type=number] { -moz-appearance:textfield; }
 /*Tipos de movimientos*/
 .tipoMov{
     font-weight: bolder;
-    font-size: x-large;
+    font-size: 2rem;
     margin-bottom: 6px;
 }
 /*Calidad de movimientos*/
 .calidadMov{
-    font-weight: bold;
-    font-size: medium;
+    font-size: 1.2rem;
     margin-bottom: 2px;
+    font-weight: bold;
 }
 
 /*Botones*/
@@ -97,8 +97,21 @@ input[type=number] { -moz-appearance:textfield; }
     border-width: 5px;
 }
 
+
+
 .value{
     font-weight: 800;
+    margin: 1rem;
+    color: white;
+    background-color: red;
+}
+
+.separacion1 {
+    height: 2em;
+}
+
+.separacion2 {
+    height: 1.3em;
 }
 
 /* resultados */
