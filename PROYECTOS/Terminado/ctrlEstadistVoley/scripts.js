@@ -423,78 +423,9 @@ let saq_r_val = saq_r.value;
 let saq_b = document.getElementById("saquesBuenos");
 let saq_b_val = saq_b.value;
 
-
-// FORMA BUENA DE IMPRIMIR(NO FUNCIONA AUN)
-
-// function impRemates(rem_m_val, rem_b_val){
-//     // Valores
-//     var tot_rem = Number(rem_m.value) + Number(rem_b.value); 
-
-//     var rematesBuenos = Number(rem_b.value);
-//     var rematesMalos =  Number(rem_m.value);
-
-//     // Resultados
-//     const result = document.getElementById("remTOT");
-//     const result2 = document.getElementById("ResultRemates");
-    
-// }
-// function impRecepciones(){}
-// function impSaques(){}
-
-// function impDT(){}
-
-// FORMA MALA DE IMPRIMIR (FUNCIONA)
-
-//FUNCION IMPRESORA INTEGRADOR (ACTULIZAR)
-
-// function imp_DT(rem_m_val, rem_r_val, rem_b_val,rec_m_val, rec_r_val, rec_b_val, saq_m_val, saq_r_val, saq_b_val){
-
-//         let rematesBuenos = Number(rem_b.value);
-//         let rematesRegulares =  Number(rem_r.value);
-//         let rematesMalos =  Number(rem_m.value);
-    
-//         let tot_rem = rematesMalos + rematesBuenos + rematesRegulares; 
-
-//     let tot_rec = Number(rec_m.value) + Number(rec_b.value); 
-
-//         let recepcionesBuenas = Number(rec_b.value);
-//         let recepcionesMalas = Number(rec_m.value);
-
-//     let tot_saq = Number(saq_m.value) + Number(saq_b.value); 
-
-//         let saquesBuenos = Number(saq_b.value);
-//         let saquesMalos = Number(saq_m.value);
-
-//     const result = document.getElementById("DatosCompletos");
-
-//     return result.innerText = "REMATES TOTALES: ======> | " + tot_rem + ' | ' + '\n' + '\b' + '\b' +"Remates buenos: ---- | " + rematesBuenos + ' | ' + '\n' + '\b' + '\b' +"Remates malos: ---- | " + rematesMalos + ' | ' + '\n' + '\n' +" RECEPCIONES TOTALES: ======> | " + tot_rec + ' | ' + '\n'  + '\b' + '\b' +"Recepciones buenas: ---- | " + recepcionesBuenas + ' | ' + '\n' + '\b' + '\b' +"Recepciones malas: ---- | " + recepcionesMalas + ' | ' + '\n' + '\n' + " SAQUES TOTALES: ======> | " + tot_saq + ' | ' + '\n'  + '\b' + '\b' +"Saques buenos: ---- | " + saquesBuenos + ' | ' + '\n' + '\b' + '\b' +"Saques malos: ---- | " + saquesMalos + ' | ' ;
-// };
-
-
-
-//ALTERNATIVA 1  A FUNCION INTEGRADORA
-// function imp_DT(rem_m_val, rem_r_val, rem_b_val,rec_m_val, rec_r_val, rec_b_val, saq_m_val, saq_r_val, saq_b_val){
-//     //remates
-// let rematesBuenos = Number(rem_b.value);
-// let rematesRegulares = Number(rem_r.value);
-// let rematesMalos =  Number(rem_m.value);
-
-// let tot_rem = rematesMalos + rematesBuenos + rematesRegulares; 
-
-//     //recepciones
-// let recepcionesBuenas = Number(rec_b.value);
-// let recepcionesRegulares = Number(rec_r.value);
-// let recepcionesMalas = Number(rec_m.value);
-
-// let tot_rec = recepcionesBuenas + recepcionesRegulares + recepcionesMalas; 
-
-//     //saques
-// let saquesBuenos = Number(saq_b.value);
-// let saquesRegulares = Number(saq_r.value);
-// let saquesMalos = Number(saq_m.value);
-
-//ALTERNATIVA 2  A FUNCION INTEGRADORA (FUNCIONA!!, COMPLETAR)
-
+//FUNCION IMPRESORA
+//DATOS A MOSTRAR
+//REMATES
 function rem_tot(rem_m_val, rem_r_val, rem_b_val){
     let rematesBuenos = Number(rem_b.value);
     let rematesRegulares = Number(rem_r.value);
@@ -502,17 +433,118 @@ function rem_tot(rem_m_val, rem_r_val, rem_b_val){
 
     let tot_rem = rematesMalos + rematesBuenos + rematesRegulares; 
 
-    const result = document.getElementById("r-tot");
+    const result = document.getElementById("rm-tot");
 
-    return result.innerText = "los remates totales son: " + tot_rem; 
+    return result.innerText = "Remates totales: " + tot_rem; 
+}; 
+
+function rem_bue(rem_b_val){
+    let rematesBuenos = Number(rem_b.value);
+
+    const result = document.getElementById("rm-bue");
+
+    return result.innerText = "Remates buenos: " + rematesBuenos; 
+}; 
+
+function rem_reg(rem_r_val){
+    let rematesRegulares = Number(rem_r.value);
+
+    const result = document.getElementById("rm-reg");
+
+    return result.innerText = "Remates regulares: " + rematesRegulares; 
+}; 
+
+function rem_mal(rem_m_val){
+    let rematesMalos = Number(rem_m.value);
+
+    const result = document.getElementById("rm-mal");
+
+    return result.innerText = "Remates malos: " + rematesMalos; 
 }; 
 
 
+//RECEPCIONES
+function rec_tot(rec_m_val, rec_r_val, rec_b_val){
+    let recepcionesBuenas = Number(rec_b.value);
+    let recepcionesRegulares = Number(rec_r.value);
+    let recepcionesMalas =  Number(rec_m.value);
+
+    let tot_rec = recepcionesMalas + recepcionesBuenas + recepcionesRegulares; 
+
+    const result = document.getElementById("rc-tot");
+
+    return result.innerText = "Recepciones totales: " + tot_rec; 
+}; 
+
+function rec_bue(rec_b_val){
+    let recepcionesBuenas = Number(rec_b.value);
+
+    const result = document.getElementById("rc-bue");
+
+    return result.innerText = "Recepciones buenas: " + recepcionesBuenas; 
+}; 
+
+function rec_reg(rec_r_val){
+    let recepcionesRegulares = Number(rec_r.value);
+
+    const result = document.getElementById("rc-reg");
+
+    return result.innerText = "Recepciones regulares: " + recepcionesRegulares; 
+}; 
+
+function rec_mal(rec_m_val){
+    let recepcionesMalas = Number(rec_m.value);
+
+    const result = document.getElementById("rc-mal");
+
+    return result.innerText = "Recepciones malos: " + recepcionesMalas; 
+}; 
 
 
+//SAQUES
+function saq_tot(saq_m_val, saq_r_val, saq_b_val){
+    let saquesBuenos = Number(saq_b.value);
+    let saquesRegulares = Number(saq_r.value);
+    let saquesMalos =  Number(saq_m.value);
+
+    let tot_saq = saquesMalos + saquesBuenos + saquesRegulares; 
+
+    const result = document.getElementById("s-tot");
+
+    return result.innerText = "Saques totales: " + tot_saq; 
+}; 
+
+function saq_bue(saq_b_val){
+    let saquesBuenos = Number(saq_b.value);
+
+    const result = document.getElementById("s-bue");
+
+    return result.innerText = "Saques buenos: " + saquesBuenos; 
+}; 
+
+function saq_reg(saq_r_val){
+    let saquesRegulares = Number(saq_r.value);
+
+    const result = document.getElementById("s-reg");
+
+    return result.innerText = "Saques regulares: " + saquesRegulares; 
+}; 
+
+function saq_mal(saq_m_val){
+    let saquesMalos = Number(saq_m.value);
+
+    const result = document.getElementById("s-mal");
+
+    return result.innerText = "Saques malos: " + saquesMalos; 
+}; 
+
+//IMPRESION DE LOS DATOS
 function imp_def(){
 
     resulta.classList.toggle('inactive');
 
-    rem_tot()
+    rem_tot(), rem_bue(), rem_mal(), rem_reg();
+    rec_tot(), rec_bue(), rec_mal(), rec_reg();
+    saq_tot(), saq_bue(), saq_mal(), saq_reg()
+
 }; 

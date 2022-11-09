@@ -33,6 +33,11 @@ margin: 0;
 
 input[type=number] { -moz-appearance:textfield; }
 
+.datosPrelim input{
+    width: 160px;
+    height: 40px;
+}
+
 /*Texto */
 /*Tipos de movimientos*/
 .tipoMov{

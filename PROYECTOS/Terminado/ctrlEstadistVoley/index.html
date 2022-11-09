@@ -11,7 +11,19 @@
 
 <body>
     <main>
-        <title> Martin</title>
+        <section class="datosPrelim">
+            <h3> Intoduce la fecha: </h3>
+            <input type="date" placeholder="">
+            <h3> Selecciona el rival: </h3>
+            <select name="select">
+                <option value="value1">Regatas Ctes.</option>
+                <option value="value2" selected>INDU</option>
+                <option value="value3">Esmugo</option>
+                <option value="value4">Relax</option>
+                <option value="value5" selected>CUNE</option>
+                <option value="value6">Bomberos VO</option>
+            </select>
+        </section>
         <section class="panel">
             <section class="remates">
                 <div>
@@ -88,40 +100,47 @@
                     <button type="button" id="restarSaqMal" class="botIncDis">-</button>
                 </div>
             </section>
-            <br>
-            <br>
-            <div>
-                <p id="DatosCompletos"></p>
-                <br>
-                <button id="imprimir" > IMPRIMIR </button>
-            </div>        
         </section>
+        <br>
+        <br>
         <section class="resultados inactive">
             <div class="ResultRemates">
                 <ul>
-                    <li id="r-tot">/li>
-                    <li id="r-bue"></li>
-                    <li id="r-reg"></li>
-                    <li id="r-mal"></li>
+                    <li id="rm-tot"></li>
+                    <ul>
+                        <li id="rm-bue"></li>
+                        <li id="rm-reg"></li>
+                        <li id="rm-mal"></li>
+                    </ul>
                 </ul>
             </div>
             <div class="ResultRecepciones">
                 <ul>
-                    <li id></li>
-                    <li id></li>
-                    <li id></li>
-                    <li id></li>
+                    <li id="rc-tot"></li>
+                    <ul>
+                        <li id="rc-bue"></li>
+                        <li id="rc-reg"></li>
+                        <li id="rc-mal"></li>
+                    </ul>
                 </ul>
             </div>
             <div class="ResultSaques">
                 <ul>
-                    <li id>/li>
-                    <li id></li>
-                    <li id></li>
-                    <li id></li>
+                    <li id="s-tot"></li>
+                    <ul>
+                        <li id="s-bue"></li>
+                        <li id="s-reg"></li>
+                        <li id="s-mal"></li>
+                    </ul>
                 </ul>
             </div>
         </section>
+        <br>
+        <div class="Boton">
+            <p id="DatosCompletos"></p>
+            <br>
+            <button id="imprimir" > IMPRIMIR </button>
+        </div> 
     </main>
 
     <!-- FUNCIONALIDADES DEL PROYECTO -->
