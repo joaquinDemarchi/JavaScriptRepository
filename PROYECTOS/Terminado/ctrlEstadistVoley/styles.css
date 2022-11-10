@@ -1,15 +1,22 @@
   /*General*/
-  body{
+
+
+body{
     font-family:'Courier New';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .inactive{
     display: none;
 }
+
+
+
 /*inputs */
 /*inputs general*/
 input, select{
-    margin-right: 15px;
     padding: 0;
     width: 60px;
     height: 40px;
@@ -32,6 +39,14 @@ margin: 0;
 }
 input[type=number] { -moz-appearance:textfield; }
 
+
+/* PARTES ESPECIFICAS */
+.presentacion{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 /* input de datos peliminares */
 .datosPrelim input{
     width: 160px;
@@ -41,6 +56,35 @@ input[type=number] { -moz-appearance:textfield; }
     font-weight: 600;
 }
 
+#fecha, #equipo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.panel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.saques, .remates, .recepciones{
+    max-width: 210px;
+}
+
+.totales{
+    margin-bottom: 1.7rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.totales input{
+    width: 70px;
+    height: 60px;
+    font-size: 2.2rem;
+}
+
 /*Texto */
 /*Tipos de movimientos*/
 .tipoMov{
@@ -48,15 +92,32 @@ input[type=number] { -moz-appearance:textfield; }
     font-size: 2rem;
     margin-bottom: 6px;
 }
+
+.recepciones .tipoMov {
+    font-size: 1.7rem;
+}
 /*Calidad de movimientos*/
 .calidadMov{
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     margin-bottom: 2px;
     font-weight: bold;
 }
 
+
+
+
+
+
+
 /*Botones*/
 /*Boton imprimir*/
+.botonImprResult{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
 #imprimir{
     width: 150px;
     height: 50px;

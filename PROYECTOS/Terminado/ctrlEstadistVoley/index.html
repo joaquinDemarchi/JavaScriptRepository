@@ -11,14 +11,22 @@
 
 <body>
     <main>
-        <h1>MONITOR DE JUGADORES/h1>
-        <img src="./Crr_ultimo.png" alt="">
+        <div class="presentacion">
+            <h1>MONITOR</h1>
+            <h2></h2>
+            <img src="./Crr_ultimo.png" alt="">
+        </div>
+
+        
         <div class="separacion1"></div>
         <section class="datosPrelim">
-            <h3> Intoduce la fecha: </h3>
-            <input type="date" placeholder="">
-            <h3> Selecciona el rival: </h3>
-            <select name="select" class="selector">
+            <div id="fecha">
+                <h3> Intoduce la fecha: </h3>
+                <input type="date" placeholder="">
+            </div>
+            <div id="equipo">
+                <h3> Selecciona el rival: </h3>
+                <select name="select" class="selector">
                 <option class="value" value="value1">Regatas Ctes.</option>
                 <option class="value" value="value2">INDU</option>
                 <option class="value" value="value3">Esmugo</option>
@@ -26,11 +34,13 @@
                 <option class="value" value="value5">CUNE</option>
                 <option class="value" value="value6">Bomberos VO</option>
             </select>
+            </div>
+            
         </section>
         <div class="separacion2"></div>
         <section class="panel">
             <section class="remates">
-                <div>
+                <div class="totales">
                     <p class="tipoMov">REMATES</p>
                     <input type="number" id = 'rematesTotales' readonly>
                 </div>
@@ -56,9 +66,9 @@
             </section >
             <br>
             <section class="recepciones">
-                <div>
+                <div class="totales">
                     <p class="tipoMov">RECEPCIONES</p>
-                    <input type="number" id = 'recepTotales' readonly>
+                    <input type="number" id='recepTotales' readonly>
                 </div>
                 <div>
                     <p class="calidadMov">Recepciones buenas</p>
@@ -81,9 +91,9 @@
             </section>
             <br>
             <section class="saques">
-                <div>
+                <div class="totales">
                     <p class="tipoMov">SAQUES</p>
-                    <input type="number" id = 'saquesTotales' readonly>
+                    <input type="number" id ='saquesTotales' readonly>
                 </div>
                 <div>
                     <p class="calidadMov">Saques buenos</p>
@@ -140,11 +150,13 @@
             </div>
         </section>
         <br>
-        <div class="Boton">
+        <div class="botonImprResult">
             <p id="DatosCompletos"></p>
             <br>
             <button id="imprimir" > IMPRIMIR </button>
-        </div> 
+        </div>
+        <br>
+        <br> 
     </main>
 
     <!-- FUNCIONALIDADES DEL PROYECTO -->
