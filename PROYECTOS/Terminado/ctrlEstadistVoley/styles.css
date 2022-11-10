@@ -54,11 +54,14 @@ input[type=number] { -moz-appearance:textfield; }
 /* tipos de movimientos */
 .tipoMov{
     font-weight: bolder;
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin-bottom: 6px;
 }
 .recepciones .tipoMov {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+}
+#txtReg {
+    font-size: 0.79rem;
 }
 
 
@@ -191,3 +194,4 @@ input[type=number] { -moz-appearance:textfield; }
 
 
 /* resultados */
+.resultados{}
