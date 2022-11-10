@@ -22,17 +22,17 @@
         <section class="datosPrelim">
             <div id="fecha">
                 <h3> Intoduce la fecha: </h3>
-                <input type="date" placeholder="">
+                <input type="date" value="2022-11-01" autocomplete="on" id="fechaP">
             </div>
             <div id="equipo">
                 <h3> Selecciona el rival: </h3>
-                <select name="select" class="selector">
-                <option class="value" value="value1">Regatas Ctes.</option>
-                <option class="value" value="value2">INDU</option>
-                <option class="value" value="value3">Esmugo</option>
-                <option class="value" value="value4">Relax</option>
-                <option class="value" value="value5">CUNE</option>
-                <option class="value" value="value6">Bomberos VO</option>
+                <select name="select" class="selector" id="equipoP">
+                <option class="value" value="REGATAS CTES.">Regatas Ctes.</option>
+                <option class="value" value="INDU">INDU</option>
+                <option class="value" value="ESMUGO">Esmugo</option>
+                <option class="value" value="RELAX">Relax</option>
+                <option class="value" value="CUNE">CUNE</option>
+                <option class="value" value="BOMBEROS">Bomberos VO</option>
             </select>
             </div>
             
@@ -118,6 +118,19 @@
         <br>
         <br>
         <section class="resultados inactive">
+            <div class="resDatPrelim">
+                <div class="rivales">
+                    <h3 id="regatas">REGATAS</h3>
+                    <h3 id="vs">VS</h3>
+                    <h3 id="rival"></h3>
+                </div>
+                <div class="jugador">
+                    <p id="jug"></p>
+                </div>
+                <div class="fecha">
+                    <p id="dia"></p>
+                </div>
+            </div>
             <div class="ResultRemates">
                 <ul>
                     <li id="rm-tot"></li>
@@ -147,6 +160,9 @@
                         <li id="s-mal"></li>
                     </ul>
                 </ul>
+                <div class="cajImgRes">
+                    <img src="./Crr_ultimo.png" alt="" class="imgRes">
+                </div>
             </div>
         </section>
         <br>

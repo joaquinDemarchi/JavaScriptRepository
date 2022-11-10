@@ -10,6 +10,11 @@ body{
     display: none;
 }
 
+ul, li{
+    list-style: none;
+    margin: 0;
+}
+
 
 
 
@@ -58,7 +63,7 @@ input[type=number] { -moz-appearance:textfield; }
     margin-bottom: 6px;
 }
 .recepciones .tipoMov {
-    font-size: 1.5rem;
+    font-size: 1.57rem;
 }
 #txtReg {
     font-size: 0.79rem;
@@ -84,7 +89,7 @@ input[type=number] { -moz-appearance:textfield; }
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 3rem;
+    margin-bottom: 3.4rem;
 }
 
 #imprimir{
@@ -156,7 +161,7 @@ input[type=number] { -moz-appearance:textfield; }
 }
 .value{
     font-weight: 800;
-    margin: 1rem;
+    margin: 3.4rem;
     color: white;
     background-color: red;
 }
@@ -180,7 +185,7 @@ input[type=number] { -moz-appearance:textfield; }
 .totales input{
     width: 70px;
     height: 60px;
-    font-size: 2.2rem;
+    font-size: 2.3.4rem;
 }
 
 
@@ -194,4 +199,79 @@ input[type=number] { -moz-appearance:textfield; }
 
 
 /* resultados */
-.resultados{}
+.resultados{
+    padding: 2.2rem 3.4rem 1.4rem 0;
+    margin-top: 3rem;
+    border-radius: 10px;
+    border-color: red;
+    box-shadow: 6px 1.3px 6px 0.5px gray;
+    background-color: red;
+    color: white;
+    list-style: none;
+    text-align:start
+    text-justify: auto;
+    text-shadow:  1px 1px 2px brown;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+#rm-tot, #rc-tot, #s-tot {
+    position: relative;
+    left: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+
+}
+
+#rc-tot, #s-tot {
+    margin-top: 2rem;
+}
+
+.resDatPrelim{
+    margin:0 0 1.5rem 3.2rem;
+    /* background: #000; */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.resDatPrelim h3, .resDatPrelim p{
+    text-align: center;
+}
+
+#rival, #regatas{
+    margin: 0;
+    font-size: 1.7rem;
+}
+#vs{
+    margin: 0;
+}
+#dia{
+    /* background-color: aquamarine; */
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+}
+
+
+.cajImgRes{
+    margin-left:3.2rem;
+    margin-top:1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.imgRes {
+    align-content: center;
+    width: 2rem;
+}
+/* #rm-bue, #rm-reg, #rm-mal,{
+    margin: 0;
+    position: relative;
+    right: 2rem;
+} */
+/* #rc-tot {
+    font-size: 1.2rem;
+} */

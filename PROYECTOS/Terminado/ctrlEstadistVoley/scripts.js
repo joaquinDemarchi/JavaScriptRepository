@@ -387,6 +387,13 @@ const resulta = document.querySelector('.resultados')
 var boton_IMPRIMIR = document.getElementById("imprimir");
 boton_IMPRIMIR.addEventListener("click", imp_def);
 
+
+//Datos preliminares
+var equipo = document.getElementById("equipoP");
+let equipo_val = equipo.value;
+
+var fecha = document.getElementById("fechaP");
+let fecha_val = fecha.value;
 //remates
 
 //malos
@@ -425,6 +432,24 @@ let saq_b_val = saq_b.value;
 
 //FUNCION IMPRESORA
 //DATOS A MOSTRAR
+//DATOS PRELIM
+function impRivales(equipo_val){
+    let equipoContrario = equipo.value;
+
+    const result = document.getElementById("rival");
+
+    return result.innerText = equipoContrario; 
+}; 
+
+function impFecha(fecha_val){
+    let fechaEvento = fecha.value;
+
+    const result = document.getElementById("dia");
+
+    return result.innerText = fechaEvento; 
+}; 
+
+//DATOS PRINCIPALES
 //REMATES
 function rem_tot(rem_m_val, rem_r_val, rem_b_val){
     let rematesBuenos = Number(rem_b.value);
@@ -435,7 +460,7 @@ function rem_tot(rem_m_val, rem_r_val, rem_b_val){
 
     const result = document.getElementById("rm-tot");
 
-    return result.innerText = "Remates totales: " + tot_rem; 
+    return result.innerText = "Remates totales: "+ tot_rem ; 
 }; 
 
 function rem_bue(rem_b_val){
@@ -542,6 +567,9 @@ function saq_mal(saq_m_val){
 function imp_def(){
 
     resulta.classList.toggle('inactive');
+
+    impRivales();
+    impFecha();
 
     rem_tot(), rem_bue(), rem_mal(), rem_reg();
     rec_tot(), rec_bue(), rec_mal(), rec_reg();
