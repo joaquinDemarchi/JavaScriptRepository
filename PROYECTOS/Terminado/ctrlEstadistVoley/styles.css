@@ -166,7 +166,6 @@ input[type=number] { -moz-appearance:textfield; }
     background-color: red;
 }
 
-
 /* panel general */
 .panel{
     display: flex;
