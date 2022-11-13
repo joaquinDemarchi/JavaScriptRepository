@@ -207,7 +207,7 @@ input[type=number] { -moz-appearance:textfield; }
     background-color: red;
     color: white;
     list-style: none;
-    text-align:start
+    text-align:start;
     text-justify: auto;
     text-shadow:  1px 1px 2px brown;
     font-weight: 600;
@@ -252,6 +252,10 @@ input[type=number] { -moz-appearance:textfield; }
     /* background-color: aquamarine; */
     margin-top: 0.5rem;
     font-size: 0.7rem;
+}
+
+#jug{
+    font-size: 0.5rem;
 }
 
 

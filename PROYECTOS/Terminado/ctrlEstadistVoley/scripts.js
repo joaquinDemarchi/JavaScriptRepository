@@ -392,6 +392,9 @@ boton_IMPRIMIR.addEventListener("click", imp_def);
 var equipo = document.getElementById("equipoP");
 let equipo_val = equipo.value;
 
+var jugador = document.getElementById("jugador");
+let jugador_val = jugador.value;
+
 var fecha = document.getElementById("fechaP");
 let fecha_val = fecha.value;
 //remates
@@ -439,6 +442,14 @@ function impRivales(equipo_val){
     const result = document.getElementById("rival");
 
     return result.innerText = equipoContrario; 
+}; 
+
+function impJugador(jugador_val){
+    let jugadorMonitoreado = jugador.value;
+
+    const result = document.getElementById("jug");
+
+    return result.innerText = "Estadisticas de " + jugadorMonitoreado; 
 }; 
 
 function impFecha(fecha_val){
@@ -569,6 +580,7 @@ function imp_def(){
     resulta.classList.toggle('inactive');
 
     impRivales();
+    impJugador();
     impFecha();
 
     rem_tot(), rem_bue(), rem_mal(), rem_reg();
