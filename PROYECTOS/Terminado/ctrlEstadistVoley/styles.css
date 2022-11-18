@@ -146,7 +146,7 @@ input[type=number] { -moz-appearance:textfield; }
     border-width: 5px;
     font-weight: 600;
 }
-#fecha, #equipo{
+#fecha, #equipo, #nJugador{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -184,7 +184,7 @@ input[type=number] { -moz-appearance:textfield; }
 .totales input{
     width: 70px;
     height: 60px;
-    font-size: 2.3.4rem;
+    font-size: 2.4rem;
 }
 
 
@@ -218,18 +218,18 @@ input[type=number] { -moz-appearance:textfield; }
     position: relative;
     left: 1.5rem;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 0.7rem;
     font-weight: 800;
     font-size: 1.1rem;
 
 }
 
 #rc-tot, #s-tot {
-    margin-top: 2rem;
+    margin-top: 1.2rem;
 }
 
 .resDatPrelim{
-    margin:0 0 1.5rem 3.2rem;
+    margin:0 0 1.2rem 3.2rem;
     /* background: #000; */
     display: flex;
     align-items: center;
@@ -255,13 +255,13 @@ input[type=number] { -moz-appearance:textfield; }
 }
 
 #jug{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
 }
 
 
 .cajImgRes{
     margin-left:3.2rem;
-    margin-top:1.5rem;
+    margin-top:2.5rem;
     display: flex;
     justify-content: center;
 }

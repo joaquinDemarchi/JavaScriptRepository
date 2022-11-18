@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="https://drive.google.com/file/d/1NEGF8SYPb782gFPB7O1OdYIwr3B-_5Yp/view?usp=share_link">
     <title>Monitor de estadisticas de partidos</title>
 
 </head>
@@ -14,21 +15,23 @@
         <div class="presentacion">
             <h1>MONITOR</h1>
             <h2></h2>
-            <img src="./Crr_ultimo.png" alt="">
+            <!-- <img src="https://ibb.co/W0CK13C" alt=""> -->
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/tzRC5hR/Crr-ultimo.png" alt="Crr-ultimo" border="0"></a>
         </div>
 
         
         <div class="separacion1"></div>
         <section class="datosPrelim">
-            <div class="nombreJugador">
+            <div id="nJugador">
+                <h3> Nombre del jugador:</h3>
                 <input id="jugador" type="text">
             </div>
             <div id="fecha">
-                <h3> Intoduce la fecha: </h3>
+                <h3> Fecha del partido: </h3>
                 <input type="date" value="2022-11-01" autocomplete="on" id="fechaP">
             </div>
                 <div id="equipo">
-                <h3> Selecciona el rival: </h3>
+                <h3> Equipo rival: </h3>
                 <select name="select" class="selector" id="equipoP">
                 <option class="value" value="REGATAS CTES.">Regatas Ctes.</option>
                 <option class="value" value="INDU">INDU</option>
@@ -51,24 +54,24 @@
         <section class="panel">
             <section class="remates">
                 <div class="totales">
-                    <p class="tipoMov">REMATES</p>
+                    <h3 class="tipoMov">REMATES</h3>
                     <input type="number" id = 'rematesTotales' readonly>
                 </div>
                 
                 <div>
-                    <p class="calidadMov">Remates buenos</p>
+                    <h3 class="calidadMov">Remates buenos</h3>
                     <input type="number" id="rematesBuenos" >
                     <button type="button" id="sumarRemBue" class="botIncDis">+</button>
                     <button type="button" id="restarRemBue" class="botIncDis">-</button>
                 </div>
                 <div>
-                    <p class="calidadMov">Remates regulares</p>
+                    <h3 class="calidadMov">Remates regulares</h3>
                     <input type="number" id="rematesRegulares" >
                     <button type="button" id="sumarRemReg" class="botIncDis">+</button>
                     <button type="button" id="restarRemReg" class="botIncDis">-</button>
                 </div>
                 <div>
-                    <p class="calidadMov">Remates malos</p>
+                    <h3 class="calidadMov">Remates malos</h3>
                     <input type="number" id="rematesMalos" >
                     <button type="button" id="sumarRemMal" class="botIncDis">+</button>
                     <button type="button" id="restarRemMal" class="botIncDis">-</button>
@@ -77,23 +80,23 @@
             <br>
             <section class="recepciones">
                 <div class="totales">
-                    <p class="tipoMov">RECEPCIONES</p>
+                    <h3 class="tipoMov">RECEPCIONES</h3>
                     <input type="number" id='recepTotales' readonly>
                 </div>
                 <div>
-                    <p class="calidadMov">Recepciones buenas</p>
+                    <h3 class="calidadMov">Recepciones buenas</h3>
                     <input type="number" id="recepcionesBuenas" >
                     <button type="button" id="sumarRecBue" class="botIncDis">+</button>
                     <button type="button" id="restarRecBue" class="botIncDis">-</button>
                 </div>
                 <div>
-                    <p class="calidadMov" id="txtReg">Recepciones regulares</p>
+                    <h3 class="calidadMov" id="txtReg">Recepciones regulares</h3>
                     <input type="number" id="recepcionesRegulares" >
                     <button type="button" id="sumarRecReg" class="botIncDis">+</button>
                     <button type="button" id="restarRecReg" class="botIncDis">-</button>
                 </div>
                 <div>
-                    <p class="calidadMov">Recepciones malas</p>
+                    <h3 class="calidadMov">Recepciones malas</h3>
                     <input type="number" id="recepcionesMalas" >
                     <button type="button" id="sumarRecMal" class="botIncDis">+</button>
                     <button type="button" id="restarRecMal" class="botIncDis">-</button>
@@ -102,23 +105,23 @@
             <br>
             <section class="saques">
                 <div class="totales">
-                    <p class="tipoMov">SAQUES</p>
+                    <h3 class="tipoMov">SAQUES</h3>
                     <input type="number" id ='saquesTotales' readonly>
                 </div>
                 <div>
-                    <p class="calidadMov">Saques buenos</p>
+                    <h3 class="calidadMov">Saques buenos</h3>
                     <input type="number" id="saquesBuenos" >
                     <button type="button" id="sumarSaqBue"  class="botIncDis">+</button>
                     <button type="button" id="restarSaqBue" class="botIncDis">-</button>
                 </div>
                 <div>
-                    <p class="calidadMov">Saques regulares</p>
+                    <h3 class="calidadMov">Saques regulares</h3>
                     <input type="number" id="saquesRegulares" >
                     <button type="button" id="sumarSaqReg"  class="botIncDis">+</button>
                     <button type="button" id="restarSaqReg" class="botIncDis">-</button>
                 </div>
                 <div>
-                    <p class="calidadMov">Saques malos</p>
+                    <h3 class="calidadMov">Saques malos</h3>
                     <input type="number" id="saquesMalos" >
                     <button type="button" id="sumarSaqMal" class="botIncDis">+</button>
                     <button type="button" id="restarSaqMal" class="botIncDis">-</button>
@@ -135,10 +138,10 @@
                     <h3 id="rival"></h3>
                 </div>
                 <div class="jugador">
-                    <p id="jug"></p>
+                    <h3 id="jug"></h3>
                 </div>
                 <div class="fecha">
-                    <p id="dia"></p>
+                    <h3 id="dia"></h3>
                 </div>
             </div>
             <div class="ResultRemates">
@@ -161,7 +164,7 @@
                     </ul>
                 </ul>
             </div>
-            <div class="ResultSaques">
+            <div class=k"ResultSaques">
                 <ul>
                     <li id="s-tot"></li>
                     <ul>
@@ -171,13 +174,13 @@
                     </ul>
                 </ul>
                 <div class="cajImgRes">
-                    <img src="./Crr_ultimo.png" alt="" class="imgRes">
+                    <a href="https://imgbb.com/"><img class="imgRes" src="https://i.ibb.co/tzRC5hR/Crr-ultimo.png" alt="Crr-ultimo" border="0"></a>
                 </div>
             </div>
         </section>
         <br>
         <div class="botonImprResult">
-            <p id="DatosCompletos"></p>
+            <h3 id="DatosCompletos"></h3>
             <br>
             <button id="imprimir" > IMPRIMIR </button>
         </div>
