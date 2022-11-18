@@ -11,29 +11,39 @@ const productDetailContainer = document.querySelector('#productDetail');
 const cardsContainer = document.querySelector('.cards-container');
 
 
+
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
 menuCarritoIcon.addEventListener('click', toggleCarritoAside);
 productDetailCloseIcon.addEventListener('click', closeProductDetailAside)
 
+//... Funciones helpers Genericos
+const inactivarContenedor = (elemento) => elemento.classList.add('inactive');
+const activarContenedor = (elemento) => elemento.classList.remove('inactive');
+const toogleInactivar = (elemento) => elemento.classList.toggle('inactive');
+const containsInactive = (elemento) => elemento.classList.contains('inactive');
+
+//funciones organizar la interaciones
 
 function toggleDesktopMenu() {
   const isAsideClosed = shoppingCartContainer.classList.contains('inactive');
 
   if (!isAsideClosed) {
-    shoppingCartContainer.classList.add('inactive');
+    // shoppingCartContainer.classList.add('inactive');
+    inactivarContenedor(shoppingCartContainer)
+
   }
 
-  desktopMenu.classList.toggle('inactive');
+  toogleInactivar(desktopMenu)
 }
 
 function toggleMobileMenu(){
   const isAsideMenuClosed = shoppingCartContainer.classList.contains('inactive');
 
   if (!isAsideMenuClosed) {
-    shoppingCartContainer.classList.add('inactive');
+    inactivarContenedor(shoppingCartContainer)
   }
-  mobileMenu.classList.toggle('inactive');
+  toogleInactivar(mobileMenu)
 
   closeProductDetailAside()
 }
@@ -44,7 +54,7 @@ function toggleCarritoAside(){
   // const isDesktopMenuClosed = desktopMenu.classList.contains('inactive'); 
 
   if (!isMobileMenuClosed) {
-    mobileMenu.classList.add('inactive');
+   inactivarContenedor(mobileMenu);
   }
   // } else if (!isDesktopMenuClosed) {
   //   desktopMenu.classList.add('inactive');
@@ -53,10 +63,10 @@ function toggleCarritoAside(){
   const isProductDetailClosed = productDetailContainer.classList.contains('inactive'); 
 
   if (!isProductDetailClosed) {
-    productDetailContainer.classList.add('inactive');
+    inactivarContenedor(productDetailContainer)
   } 
 
-  shoppingCartContainer.classList.toggle('inactive')
+  toogleInactivar(shoppingCartContainer)
 
 }
 // incluimos el listado de articulos desde JS
@@ -81,12 +91,12 @@ productList.push({
 });
 
 function openProductDetailAside() {
-  shoppingCartContainer.classList.add('inactive');
-  productDetailContainer.classList.remove('inactive');
+  inactivarContenedor(shoppingCartContainer)
+  activarContenedor(productDetailContainer)
 }
 
 function closeProductDetailAside() {
-  productDetailContainer.classList.add('inactive');
+  inactivarContenedor(productDetailContainer)
 }
 
 
