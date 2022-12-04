@@ -72,3 +72,4 @@ function ordenarLista(listaDesordenada) {
   const lista = listaDesordenada.sort((a,b) => a-b);
   
   return lista;
+}
