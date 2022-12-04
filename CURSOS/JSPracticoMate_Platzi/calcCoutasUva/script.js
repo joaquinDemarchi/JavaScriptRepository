@@ -1,5 +1,6 @@
 
 
+// declaro las variables
 var cuotasRestantes = Number(prompt('ingrese cuotas restantes por pagar:'));
 var montoDeUltmCuota = Number(prompt('ingrese monto de la ultima cuota:'));
 var inflacion = Number(prompt('ingrese inflacion protyectada para los prox. 12 meses'));
@@ -9,10 +10,10 @@ var variacionUvaMensual = uva/12;
 var coutasPorMes = [];
 
 
+// ciclo que añade las outas al array y cualcula el % de suba mensual en base al dato de inflacion proyectado
 
 for (var i = 1; i <= cuotasRestantes; i++){
    
-   // let montoInicial = montoDeUltmCuota;
    const incremento = variacionUvaMensual;
 
    let nuevaCuota = Math.floor(montoDeUltmCuota + (montoDeUltmCuota*incremento));
@@ -25,12 +26,10 @@ for (var i = 1; i <= cuotasRestantes; i++){
 
 }
 
+//corroborar que devuelve
 // console.log(coutasPorMes);
 
-function funcionReduce (valAcum, valAct){
-   return valAcum + valAct;
-}
+var sumaTodasCoutas = coutasPorMes.reduce((a,b)=> a+b);
 
-var sumaTodasCoutas = coutasPorMes.reduce(funcionReduce);
-
+//respuesta general devuelta
 console. log("El monto total a pagar teniendo en cuanta una inflacion del " + inflacion + "% para los proximos 12 meses es de $" + sumaTodasCoutas );
