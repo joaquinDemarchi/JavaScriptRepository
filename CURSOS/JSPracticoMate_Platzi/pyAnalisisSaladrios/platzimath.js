@@ -15,7 +15,7 @@ const PlatziMath = {};
 //AHORA SE LE VAN CARGANDO LAS FUNCIONES, el nombre de las funcion seria la LLAVE del objeto y la FUNCION propiamente dicha el valor. Tambein se puede poner como valor funciones anonimas
 PlatziMath.esPar = function esPar(lista) {
   return !(lista.length % 2);
-}y
+}
 
 PlatziMath.esImpar = function esImpar(lista) {
   return lista.length % 2;
