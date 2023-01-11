@@ -11,8 +11,7 @@ botonCalcular.addEventListener("click", convertir);
 
 
 function convertir(){
-   
-   const conGas = conceptoGasto.value;
+
    const gas = gasto.value;
    const hs = hsTrabMes.value;
    const sal = salMes.value;
@@ -20,7 +19,48 @@ function convertir(){
    const salXhs = sal / hs;
    const salXmin = salXhs / 60;
 
-   const gastoEnMin = gas / salXmin;
+   var gastoEnMin = Math.ceil(gas / salXmin);
+   var minRestantes = Number(gastoEnMin % 60);
+
+   console.log({gastoEnMin, minRestantes})
+
+   if (gastoEnMin < 60){
+      if (gastoEnMin == 1){
+         return resultadoEnP.innerText = gastoEnMin + ' minuto.';
+      } else {
+         return resultadoEnP.innerText = gastoEnMin + ' minutos.';
+      }
+   } else {
+      if (minRestantes == 0){
+
+         gastoEnMin = gastoEnMin / 60;
    
-   return resultadoEnP.innerText = gastoEnMin;
+         if (gastoEnMin == 1){
+            return resultadoEnP.innerText = gastoEnMin + ' hora.';
+         } else {
+            return resultadoEnP.innerText = gastoEnMin + ' horas.';
+         }
+      } else {
+         gastoEnMin = Math.floor( gastoEnMin / 60);
+   
+         if (gastoEnMin == 1) {
+            
+            if (minRestantes == 1){
+               return resultadoEnP.innerText = gastoEnMin + ' hora y ' + minRestantes + ' minuto.';
+            } else { 
+               return resultadoEnP.innerText = gastoEnMin + ' hora y ' + minRestantes + ' minutos.';
+            }
+         } else {
+            if (minRestantes == 1){
+               return resultadoEnP.innerText = gastoEnMin + ' horas y ' + minRestantes + ' minuto.';
+            } else { 
+               return resultadoEnP.innerText = gastoEnMin + ' horas y ' + minRestantes + ' minutos.';
+            }
+         }
+      }
+   }
+
+   
 }
+
+
