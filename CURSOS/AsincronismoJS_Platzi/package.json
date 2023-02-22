@@ -1,0 +1,17 @@
+{
+  "name": "asincronismojs_platzi",
+  "version": "1.0.0",
+  "description": "Realizado en 2023",
+  "main": "index.js",
+  "scripts": {
+    "callback": "node src/callbacks/challange.js"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "Demarchi Joaquin joa.demarchi@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
