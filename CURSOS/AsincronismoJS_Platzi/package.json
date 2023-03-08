@@ -12,6 +12,8 @@
   "author": "Demarchi Joaquin joa.demarchi@gmail.com",
   "license": "MIT",
   "dependencies": {
+    "node-fetch": "^3.3.0",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "type": "module"
 }
