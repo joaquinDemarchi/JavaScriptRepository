@@ -25,21 +25,35 @@
       button,h1{
          margin-top: 1rem ;
       }
+
+      footer {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 2rem;
+      
+      }
+      p {
+         color: black;      
+      }
    </style>
    <title>Perritos</title>
 </head>
 <body>
    
    <div class="container-fluid d-flex">
-      <h1>API de perritos</h1>
-      <img alt="Imagen de perritos" id="imagen">
+      <div class="container-fluid d-flex text-center">
+         <h1>API de Perritos</h1>
+      <p>Este es un sitio web que solo muestra fotos de perritos.<p>
+      </div>
+      <img id="imagen">
       <button type="button" class="btn btn-success" id="boton" >Muestrame otro</button>
    </div>
 
 
 
    <footer>
-      <p>Hecho con ❤️ por <a href="https://github.com/julian1david"> @JoaquinDemarchi 😊</a></p>
+      <p>Hecho con ❤️ por <a href="https://github.com/joaquinDemarchi/JavaScriptRepository/tree/main/CURSOS/APIsFundamentos_Platzi/Prueba%20APIs%20faciles"> @JoaquinDemarchi 😊</a></p>
   </footer>
 
    <script src="./main.js"></script>
